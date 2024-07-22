@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+      label::after{
+          content: "*";
+      }
+      error{
+          font-size: 17px;
+          margin-top: 3px;
+          color: red;
+          display: block;
+      }
+      .password-check::after{
+          content: "";
+      }
+      .password-check{
+          display: flex;
+          color: gray;
+          font-weight: bold;
+      }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+          <div class="my_logo">
+          <div class="loader"></div>
+          <a class="navbar-brand" href="#myPage">Consoletech IT Solutions</a>
+          </div>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/">HOME</a></li>
+              <li><a href="/login">LOGIN</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid reg">
+      <form action="#" method="post" onsubmit="return validate()">
+        <fieldset>
+            <legend>Registration Form</legend>
+          <p>
+              <label for="name">Full Name</label>
+              <input id="name" name="name" placeholder="Full Name" type="text" required>
+          </p>
+          <p>
+            <label for="number">Phone Number</label>
+            <input type="text" name="number" placeholder="Phone Number" onkeyup="val(this)">
+            <div id="res"></div>
+        </p>
+        <p>
+          <label for="email">Email ID</label>
+          <input id="email" name="email" placeholder="Email id" type="text" onkeyup="white(this.value)" required>
+        </p>
+        <p>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="off" onkeyup="passCheck(this.value)">
+          
+      </p>
+      <p>
+          <label for="confirm_password">Confirm Password</label>
+          <input id="confirm_password" name="confirm_password" type="password" onkeyup="check(this)">
+          <error id="alert"></error>
+          <error id="caps"></error>
+          <error id="space"></error>
+      </p>
+      <p>
+          <label class="password-check">8 characters</label>
+          <label class="password-check">1 lower case character</label>
+          <label class="password-check">1 upper case character</label>
+          <label class="password-check">1 numeric character</label>
+          <label class="password-check">1 specil character</label>
+      </p>
+      <p>
+          <input id="submit" type="submit" value="SUBMIT">
+          <button type="button" onclick="toggle(this)">Show Password</button>
+      </p>
+        </fieldset>
+      </form>
+    </div>
+
+
+
+      <footer class="foot">
+        <p>Designed and Developed By Dhananjay Thakur</p>
+      </footer>
+    
+</body>
+
+<script src="js/script.js"></script>
+</html>
