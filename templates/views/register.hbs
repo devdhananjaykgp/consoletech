@@ -50,7 +50,7 @@
       </nav>
 
       <div class="container-fluid reg">
-      <form action="#" method="post" onsubmit="return validate()">
+      <form action="/register" method="POST" onsubmit="return validate()">
         <fieldset>
             <legend>Registration Form</legend>
           <p>
@@ -73,7 +73,7 @@
       </p>
       <p>
           <label for="confirm_password">Confirm Password</label>
-          <input id="confirm_password" name="confirm_password" type="password" onkeyup="check(this)">
+          <input id="confirm_password" name="confirmpassword" type="password" onkeyup="check(this)">
           <error id="alert"></error>
           <error id="caps"></error>
           <error id="space"></error>
